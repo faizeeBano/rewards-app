@@ -1,1 +1,1 @@
-# rewards-app
+# Rewards App

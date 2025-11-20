@@ -1,0 +1,40 @@
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: lightblue;
+  padding: 25px 0px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.header-text {
+  
+}
+
+.title {
+  padding: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background: lightblue;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.footer-subText {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #555;
+}
