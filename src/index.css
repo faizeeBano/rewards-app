@@ -1,28 +1,31 @@
-*, body {
+*,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: monospace;
 }
 
 header {
-  background-color: lightblue;
+  background-color: #e6d3c6;
   padding: 25px 0px;
   font-size: 20px;
   text-align: center;
 }
 
-.header-text {
-  
-}
+.header-text {}
 
 .title {
   padding: 20px;
+  text-align: center;
+  background: chocolate;
+    color: #ebe7e7;
 }
 
 .footer {
   text-align: center;
   padding: 20px 0;
-  background: lightblue;
+  background: #e6d3c6;
   margin-top: 40px;
   border-top: 1px solid #ddd;
 }
@@ -37,4 +40,113 @@ header {
   margin: 5px 0 0;
   font-size: 14px;
   color: #555;
+}
+
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.tx-table th,
+.tx-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.pagination .active-page {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+  font-weight: bold;
+}
+
+.loading {
+  text-align: center;
+}
+
+
+/* Center screen overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal box */
+.modal-box {
+  background: white;
+  padding: 20px;
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Buttons */
+.open-btn,
+.close-btn {
+  padding: 8px 14px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-btn {
+  background: #dc3545;
+  margin-top: 10px;
+}
+
+/* Simple fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

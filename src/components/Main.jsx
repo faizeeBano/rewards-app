@@ -1,7 +1,9 @@
-import React from 'react'
+import TransactionContainer from './TransactionContainer';
 
 export default function Main() {
   return (
-    <div>Main</div>
+    <>
+      <TransactionContainer />
+    </>
   )
 }
