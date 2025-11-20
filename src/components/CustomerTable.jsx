@@ -1,9 +1,10 @@
-import PropTypes from "prop-types";
 import { useState } from "react";
 import CustomerRow from "./CustomerRow";
 import Modal from "./Modal";
 
 function CustomerTable({ customers = [] }) {
+  const [selectedCustomer, setSelectedCustomer] = useState(null);
+
   return (
     <>
       <table className="tx-table">
@@ -21,10 +22,18 @@ function CustomerTable({ customers = [] }) {
             <CustomerRow
               customer={customer}
               key={customer?.customerId}
+              onView={(c) => setSelectedCustomer(c)}
             />
           ))}
         </tbody>
       </table>
+
+      {selectedCustomer && (
+        <Modal
+          customer={selectedCustomer}
+          close={() => setSelectedCustomer(null)}
+        />
+      )}
     </>
   );
 }
