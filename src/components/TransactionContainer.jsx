@@ -1,11 +1,10 @@
 import { useState, useMemo } from "react";
 
 import TransactionTable from "./TransactionTable";
-import Loading from "./common/Loading";
+import TransactionPagination from "./TransactionPagination";
 
 import { DEFAULT_PAGE_SIZE } from "../constants";
 import useFetch from "../hooks/useFetch";
-import TransactionPagination from "./TransactionPagination";
 
 function TransactionContainer() {
   const { transactions, loading, error } = useFetch();
@@ -20,16 +19,13 @@ function TransactionContainer() {
     return Math.ceil(transactions.length / DEFAULT_PAGE_SIZE);
   }, [transactions]);
 
-  { loading && <Loading /> }
-  { error && <p>{error}</p> }
-
   return (
     <div className="transaction-container">
       {(!loading && !error) && (
         <>
           <h2 className="title">All Transactions List</h2>
           <TransactionTable allTransactions={currentData} />
-          <TransactionPagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
+          {totalPages > 1 && <TransactionPagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />}
         </>
       )}
     </div>

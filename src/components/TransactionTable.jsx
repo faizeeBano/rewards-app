@@ -4,7 +4,7 @@ function TransactionTable({ allTransactions = [] }) {
   return (
     <table className="tx-table">
       <thead>
-        <tr>
+        <tr style={{background: "lightsteelblue"}}>
           <th>Transaction ID</th>
           <th>Date</th>
           <th>Customer Name</th>

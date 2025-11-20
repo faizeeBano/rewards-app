@@ -1,4 +1,6 @@
-function TransactionPagination({ currentPage, totalPages, onPageChange }) {
+import PropTypes from "prop-types";
+
+function TransactionPagination({ currentPage = 0, totalPages = 0, onPageChange }) {
   function handlePrev() {
     if (currentPage > 1) onPageChange(currentPage - 1)
   }
@@ -15,5 +17,11 @@ function TransactionPagination({ currentPage, totalPages, onPageChange }) {
     </div>
   )
 }
+
+TransactionPagination.propTypes = {
+  currentPage: PropTypes.number.isRequired,
+  totalPages: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired,
+};
 
 export default TransactionPagination;

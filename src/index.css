@@ -19,7 +19,7 @@ header {
   padding: 20px;
   text-align: center;
   background: chocolate;
-    color: #ebe7e7;
+  color: #ebe7e7;
 }
 
 .footer {
@@ -53,6 +53,11 @@ header {
   margin: 20px 0px;
 }
 
+.tx-table tr:hover {
+  background-color: rgb(240, 224, 212);
+  cursor: pointer;
+}
+
 .tx-table th,
 .tx-table td {
   padding: 8px 10px;
@@ -82,7 +87,7 @@ header {
   justify-content: center;
   gap: 8px;
   align-items: center;
-  padding: 10px 0;
+  padding: 5px 0 25px 0px;
   text-align: center;
 }
 
@@ -139,14 +144,57 @@ header {
   margin-top: 10px;
 }
 
+.view-btn {
+  background: green;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 /* Simple fade animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(-8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.filter-panel {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px;
+  align-items: center;
+}
+
+.filter-panel input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.filter-panel select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.filter-panel button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #2b7cff;
+  color: white;
+}
+
+.text {
+  background-color: #ddd;
+  text-align: center;
+  padding: 20px 0px;
 }
